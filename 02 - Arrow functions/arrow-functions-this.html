@@ -61,6 +61,27 @@
   </div>
 
   <script>
+    
+    const box = document.querySelector('.box');
+    
+    box.addEventListener('click', function(){ 
+      let first = 'opening';
+      let second = 'open';
+
+      if(this.classList.contains(first)){
+        [first, second] = [second, first];
+      }
+      
+      this.classList.toggle('opening');
+      setTimeout(() => { //*
+        console.log(this.classList); 
+        this.classList.toggle('open'); 
+      }, 500);
+    });
+    // * so we can use arrow function for thing inside of a normal funcion 
+    // and it's going to contain the value of this
+      
+
   </script>
 
 </body>
