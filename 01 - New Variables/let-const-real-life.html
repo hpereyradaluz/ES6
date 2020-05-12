@@ -6,14 +6,20 @@
 </head>
 <body>
 <script>
+// IIFE inmed(iatly invoked functions expressions
+// (function(){
+//   var name ='wes';
+//   console.log(name);
+// })()
+// we don use that anymore, in case use block and const
   {
-    const name = 'wes';
+    const name = 'her';
     console.log(name);
   }
 
-  for(let i = 0; i < 10; i++) {
+  for(let i = 0; i <10; i++){ //change let to var and see only print value 10
     console.log(i);
-    setTimeout(function() {
+    setTimeout(function(){
       console.log('The number is ' + i);
     },1000);
   }

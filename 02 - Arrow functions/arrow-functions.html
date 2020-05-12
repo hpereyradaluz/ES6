@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Arrow functions → → </title>
+</head>
+<body>
+<script>
+  const names = ['wes', 'kait', 'lux'];
+
+  const fullName = names.map(function(name){
+    return `${name} bos`;
+  });
+
+  const fullName2 = names.map((name) => {
+    return `${name} bos`;
+  })
+  
+  const fullName3 = names.map(name => {
+    return `${name} bos`;
+  })
+
+  const fullName4 = names.map(name => `${name} bos`) //implicit return
+  
+  const fullName5 = names.map(() => `cool bos`) //implicit return
+
+  console.log(fullName5);
+
+  //array functions are always anonymous functions, means that you can't name them
+  // but can do this
+
+  const sayMyName = (name) => {
+    alert (`Hello ${name}!`);
+  }
+
+  sayMyName('Wes');
+
+</script>
+</body>
+</html>
